@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Browser Privacy Analyzer Report Schema",
+  "type": "object",
+
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "description": "Unique ID for this analysis job"
+    },
+
+    "url": {
+      "type": "string",
+      "description": "URL that was analyzed"
+    },
+
+    "session_start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the session started"
+    },
+
+    "session_end": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the session ended"
+    },
+
+    "url_analysis": {
+      "type": "object",
+      "properties": {
+        "is_https": { "type": "boolean" },
+        "is_homograph": { "type": "boolean" },
+        "suspicious_patterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "final_url_risk": {
+          "type": "string",
+          "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+        }
+      },
+      "required": ["is_https", "is_homograph", "final_url_risk"]
+    },
+
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "requested": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unexpected": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "permission_risk": {
+          "type": "string",
+          "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+        }
+      }
+    },
+
+    "header_analysis": {
+      "type": "object",
+      "properties": {
+        "modified_headers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "missing_security_headers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "header_risk": {
+          "type": "string",
+          "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+        }
+      }
+    },
+
+    "behavior_analysis": {
+      "type": "object",
+      "properties": {
+        "network_calls": { "type": "number" },
+        "suspicious_endpoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "eval_usage_detected": { "type": "boolean" },
+        "behavior_risk": {
+          "type": "string",
+          "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+        }
+      }
+    },
+
+    "download_analysis": {
+      "type": "object",
+      "properties": {
+        "downloads": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": { "type": "string" },
+              "extension": { "type": "string" },
+              "is_blocked": { "type": "boolean" },
+              "reason": { "type": "string" }
+            },
+            "required": ["filename", "extension", "is_blocked"]
+          }
+        },
+        "download_risk": {
+          "type": "string",
+          "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+        }
+      }
+    },
+
+    "final_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+
+    "overall_risk_level": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+    }
+  },
+
+  "required": [
+    "job_id",
+    "url",
+    "session_start",
+    "session_end",
+    "url_analysis",
+    "permissions",
+    "header_analysis",
+    "behavior_analysis",
+    "download_analysis",
+    "final_score",
+    "overall_risk_level"
+  ]
+}
