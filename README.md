@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# 🌐 Browser Analyzer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=white)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Available Scripts
+A full-stack web application that analyzes URLs and identifies potential privacy and security risks. The application helps users determine whether a website is safe by inspecting URLs and highlighting suspicious indicators.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📖 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Browser Analyzer is a web-based security tool designed to inspect website URLs and provide a privacy and security assessment. It helps users recognize suspicious websites by checking various URL characteristics and displaying an easy-to-understand risk analysis.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🔍 Analyze website URLs
+- 🛡️ Detect suspicious URL patterns
+- 🚨 Identify phishing indicators
+- 📊 Generate privacy & security reports
+- ⚡ Real-time analysis
+- 💻 Responsive and user-friendly interface
+- 🔗 FastAPI-powered backend
+- 🌐 REST API integration
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🎨 Frontend
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Axios
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ⚙️ Backend
+- FastAPI
+- Python
+- Uvicorn
 
-### `npm run eject`
+### 🧰 Tools
+- Git
+- GitHub
+- Docker
+- VS Code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```text
+Browser-Analyzer/
+│
+├── public/
+├── src/
+├── package.json
+├── package-lock.json
+│
+├── backend/
+│   ├── analyzer.py
+│   ├── utils.py
+│   ├── storage.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── report_schema.json
+│
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+└── README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1️⃣ Clone the Repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/Deekshasuresh009/Browser-Analyzer.git
+```
 
-### Code Splitting
+### 2️⃣ Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+npm start
+```
 
-### Analyzing the Bundle Size
+The frontend will run at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+http://localhost:3000
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3️⃣ Backend Setup
 
-### Advanced Configuration
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The backend will run at:
 
-### Deployment
+```
+http://127.0.0.1:8000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🧪 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. 🌐 Enter a website URL.
+2. 🔍 Submit it for analysis.
+3. ⚙️ The FastAPI backend processes the request.
+4. 📈 The application evaluates potential privacy and security risks.
+5. ✅ A detailed analysis report is displayed to the user.
+
+---
+
+## 🎯 Future Enhancements
+
+- 🤖 Machine Learning-based phishing detection
+- 🔒 SSL Certificate validation
+- 🌍 WHOIS Lookup
+- 📈 Domain Reputation Scoring
+- 🛡️ VirusTotal API Integration
+- 🌐 Browser Extension Support
+- 📊 Advanced Security Dashboard
+
+---
+
+## 👩‍💻 Author
+
+**Devi Deekshitha**
+
+📧 Email: deekshasuresh1976@gmail.com
+
+💼 LinkedIn: www.linkedin.com/in/c-s-devi-deekshitha-7a4a51328
