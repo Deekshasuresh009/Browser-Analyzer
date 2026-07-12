@@ -4,7 +4,6 @@
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 A full-stack web application that analyzes URLs and identifies potential privacy and security risks. The application helps users determine whether a website is safe by inspecting URLs and highlighting suspicious indicators.
 
@@ -12,7 +11,7 @@ A full-stack web application that analyzes URLs and identifies potential privacy
 
 ## 📖 Overview
 
-Browser Analyzer is a web-based security tool designed to inspect website URLs and provide a privacy and security assessment. It helps users recognize suspicious websites by checking various URL characteristics and displaying an easy-to-understand risk analysis.
+Browser Analyzer is a web-based security tool designed to inspect website URLs and provide a privacy and security assessment. It helps users recognize suspicious websites by checking various URL characteristics and displaying an easy to understand risk analysis.
 
 ---
 
