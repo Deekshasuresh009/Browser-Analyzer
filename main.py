@@ -6,9 +6,9 @@ import uuid
 import aiofiles
 
 # correct relative import – use worker inside app package
-from .worker import enqueue_job
-from .storage import set_job, get_job
-from .analyzer import analyze_url
+from worker import enqueue_job
+from storage import set_job, get_job
+from analyzer import analyze_url
 
 UPLOAD_DIR = Path("uploads"); UPLOAD_DIR.mkdir(exist_ok=True)
 REPORT_DIR = Path("reports"); REPORT_DIR.mkdir(exist_ok=True)
